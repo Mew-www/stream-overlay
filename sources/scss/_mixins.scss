@@ -1,0 +1,52 @@
+@function hsb($hue, $saturation, $brightness, $alpha: 1) {
+  $luminosity: (2 - ($saturation/100)) * ($brightness / 2);
+  // Luminosity of 0 means black
+  @if $luminosity == 0 {
+    @return hsla(0, 0, 0, $alpha);
+  } @else {
+    @if $luminosity == 1 {
+      @return hsla($hue, 0, $luminosity, $alpha);
+    } @else if $luminosity < 50 {
+      $hsl-saturation: ($saturation * $brightness) / ($luminosity * 2);
+      @return hsla($hue, $hsl-saturation, $luminosity, $alpha);
+    } @else {
+      $hsl-saturation: ($saturation * $brightness) / (200 - ($luminosity * 2));
+      @return hsla($hue, $hsl-saturation, $luminosity, $alpha);
+    }
+  }
+}
+
+// Border-total = margin + border + shadow
+@mixin box-with-pretty-border($box-width, $box-height, $border-total: 14px, $colour-scheme: hsb(301.6, 84.6, 100)) {
+  $border-hilight:   $border-total / 7; // -> margin
+  $border-shadow:    $border-total / 2; // -> box-shadow
+
+  /*
+    Originals ♥
+    $outer-hilight-color: hsb(303, 78, 59);      // #962191
+    $border-color:        hsb(301.6, 84.6, 100); // #FF27F9
+    $inner-hilight-color: hsb(301.6, 84.6, 100); // #FF27F9
+    $shadow-mid-color:    hsb(304.54545454545456, 27.04918032786886, 95.68627450980393); // F4B2EF
+    $shadow-end-color:    white;
+  */
+
+  $outer-hilight-color: adjust_color($colour-scheme, $hue: 0.85deg, $saturation: -36, $lightness: -21.9);
+  $border-color:        $colour-scheme;
+  $inner-hilight-color: $colour-scheme;
+  $shadow-mid-color:    adjust_color($colour-scheme, $hue: 3deg, $saturation: -26, $lightness: 25);
+  $shadow-end-color:    white;
+
+  $margin: $border-hilight;
+
+  box-sizing: border-box;
+  width: $box-width - ($margin*2);
+  height: $box-height - ($margin*2);
+  margin: $margin;
+  border: solid;
+  border-width: $border-total - ($margin*2) - $border-shadow;
+  border-color: $border-color;
+  box-shadow:
+          0 0 0 $margin $outer-hilight-color,
+          0 0 0 2px $inner-hilight-color inset,
+          0 0 $border-shadow $border-shadow $shadow-mid-color inset;
+}

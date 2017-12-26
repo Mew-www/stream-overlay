@@ -1,0 +1,9 @@
+$window-width:  1920px;
+$window-height: 1080px;
+
+.App {
+  &--pretty-border-box {
+    @include box-with-pretty-border($window-width, $window-height, 14px);
+  }
+  position: relative;
+}
