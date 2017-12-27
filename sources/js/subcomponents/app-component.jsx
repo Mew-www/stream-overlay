@@ -18,8 +18,8 @@ export class AppComponent extends Component {
           width="1410px"
           height="150px"
           offsetY="900px"
-          offsetX="42px"
-        />
+          offsetX="42px">
+        </BoxComponent>
         <BoxComponent
           width="400px"
           height="420px"

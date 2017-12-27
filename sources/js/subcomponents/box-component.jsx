@@ -17,6 +17,7 @@ export class BoxComponent extends Component {
              left: this.props.offsetX,
              borderWidth: this.props.borderWidth ? this.props.borderWidth : "30px"
            }}>
+        {this.props.children}
       </div>
     );
   }
