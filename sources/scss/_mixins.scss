@@ -17,7 +17,11 @@
 }
 
 // Border-total = margin + border + shadow
-@mixin box-with-pretty-border($box-width, $box-height, $border-total: 14px, $colour-scheme: hsb(301.6, 84.6, 100)) {
+@mixin box-with-pretty-border($box-width,
+                              $box-height,
+                              $border-total: 14px,
+                              $colour-scheme: hsb(301.6, 84.6, 100))
+{
   $border-hilight:   $border-total / 7; // -> margin
   $border-shadow:    $border-total / 2; // -> box-shadow
 

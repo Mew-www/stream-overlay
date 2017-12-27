@@ -1,0 +1,19 @@
+.Box {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  box-sizing: border-box;
+
+  border: solid;
+  // border-width set inline in jsx
+  border-image: linear-gradient(
+                  135deg,
+                  #a427c4 0%,
+                  #c9288b 3%,
+                  #c4278a 22%,
+                  #ffffff 50%,
+                  #d12193 78%,
+                  #cc008e 97%,
+                  #a000e0 100%) 10;
+}
