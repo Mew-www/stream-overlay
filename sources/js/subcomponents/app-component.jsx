@@ -1,5 +1,6 @@
 import React, {Component} from "react";
 import {BoxComponent} from "./box-component";
+import {NPListComponent} from "./nplist-component";
 
 export class AppComponent extends Component {
   constructor(props) {
@@ -19,6 +20,9 @@ export class AppComponent extends Component {
           height="150px"
           offsetY="900px"
           offsetX="42px">
+          <NPListComponent
+            text="Now playing . . ."
+          />
         </BoxComponent>
         <BoxComponent
           width="400px"
