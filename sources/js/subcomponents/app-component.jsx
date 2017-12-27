@@ -21,14 +21,14 @@ export class AppComponent extends Component {
           offsetY="900px"
           offsetX="42px">
           <NPListComponent
-            text="Now playing . . ."
+            text="♪♫ Now playing janna themed music ♪♫"
           />
         </BoxComponent>
         <BoxComponent
-          width="400px"
-          height="420px"
-          offsetY="630px"
-          offsetX="1480px"
+          width="191px"
+          height="203px"
+          offsetY="649px"
+          offsetX="1510px"
           borderWidth="10px"
         />
       </div>
