@@ -6,3 +6,6 @@
 
 # distributable (compiled) files
 /distribution/
+
+# keys passwords whatnot
+/sources/js/settings.js
