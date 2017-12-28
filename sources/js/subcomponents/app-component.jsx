@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import {BoxComponent} from "./box-component";
 import {NPListComponent} from "./nplist-component";
+import {GifComponent} from "./gif-component";
 
 export class AppComponent extends Component {
   constructor(props) {
@@ -31,6 +32,16 @@ export class AppComponent extends Component {
           offsetX="1510px"
           borderWidth="10px"
         />
+        <BoxComponent
+          width="250px"
+          height="250px"
+          offsetY="390px"
+          offsetX="1487px"
+          borderWidth="0px">
+          <GifComponent
+            keyword="bunny"
+          />
+        </BoxComponent>
       </div>
     );
   }

@@ -1,0 +1,12 @@
+.Gif {
+  position: relative;
+  &__keyword {
+    position: absolute;
+    top: 20%;
+    left: 110%;
+    font-family: Helvetica, sans-serif;
+    font-size: 30px;
+    color: whitesmoke;
+    font-weight: 700;
+  }
+}
