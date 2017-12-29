@@ -1,5 +1,5 @@
-const GIPHY_API_KEY = 'xxx';
-const YOUTUBE_API_KEY = 'xxx';
+const GIPHY_API_KEY = 'pBM5KlfmNAm0XcGrXDtsVo4wyuqC2Hsw';
+const YOUTUBE_API_KEY = 'AIzaSyAfKpCVBRUxJ9iZQgmWr9Fnq9ENHXT7aIQ';
 
 export default {
 

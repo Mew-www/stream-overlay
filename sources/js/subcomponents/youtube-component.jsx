@@ -92,7 +92,8 @@ export class YoutubeComponent extends Component {
                             style={{visibility: this.props.sound_only ? "hidden" : "visible"}}
                             src={`https://www.youtube.com/embed/${this.state.video.id}`
                                 + `?autoplay=1`
-                                + `&iv_load_policy=3`}
+                                + `&iv_load_policy=3`
+                                + `&rel=0`}
                             frameborder="0">
                     </iframe>
                   </div>
