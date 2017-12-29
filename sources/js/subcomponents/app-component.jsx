@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import {BoxComponent} from "./box-component";
-import {NPListComponent} from "./nplist-component";
 import {GifComponent} from "./gif-component";
+import {YoutubeComponent} from "./youtube-component";
 
 export class AppComponent extends Component {
   constructor(props) {
@@ -21,8 +21,9 @@ export class AppComponent extends Component {
           height="150px"
           offsetY="900px"
           offsetX="42px">
-          <NPListComponent
-            text="♪♫ Now playing janna themed music ♪♫"
+          <YoutubeComponent
+            video_link="https://www.youtube.com/watch?t=00m30s&v=dv13gl0a-FA#title"
+            sound_only={true}
           />
         </BoxComponent>
         <BoxComponent
